@@ -18,7 +18,7 @@ steps:
     location: 'Central US'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/manideep-malyala/azure-cir-pipeline-repo/main/CreateWebApp/azuredeploy.json'
-    overrideParameters: '-projectName myarmpipeline'
+    overrideParameters: '-projectName myazweb'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
 - script: |
