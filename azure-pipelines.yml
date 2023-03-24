@@ -1,4 +1,4 @@
----
+# Starter pipeline
 trigger:
 - main
 
@@ -8,6 +8,7 @@ pool:
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
+
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
@@ -15,12 +16,13 @@ steps:
     subscriptionId: 'bd149498-67b2-47f0-8ef2-975bc14a5dd4'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'AzureRMPipeline'
-    location: 'Central US'
+    location: 'South India'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/manideep-malyala/azure-cir-pipeline-repo/main/CreateWebApp/azuredeploy.json'
-    overrideParameters: '-projectName myazweb'
+    overrideParameters: '-projectName mywebapp'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
+
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
